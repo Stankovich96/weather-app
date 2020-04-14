@@ -347,3 +347,18 @@ body {
   to {
     transform: translateX(0);
     opacity: 1; } }
+
+#cloudy-weather-card {
+  background: url(../img/cloudy-weather.png);
+  background-position: top; }
+
+#sunny-weather-card {
+  background: url(../img/sunny-weather.jpg);
+  background-size: 130% 380%;
+  background-position: bottom right; }
+  #sunny-weather-card .header .search__input {
+    color: #0A0B0D; }
+    #sunny-weather-card .header .search__input:hover {
+      border-bottom: 1px solid #83838C; }
+  #sunny-weather-card .weather {
+    background: linear-gradient(7.04deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.28) 40.2%, rgba(255, 255, 255, 0) 80%); }
