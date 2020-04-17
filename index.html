@@ -34,10 +34,23 @@
         <div class="date-stamp">14:04 PM - Saturday, 11 April 2020</div>
         <div class="city">
             <div class="city__location">Onitsha City, Nigeria</div>
-            <div class="city__location--change">
-                <button class="city__location--change-button">Change</button>
+            <div class="city__location--change" id="change-button">
+                <a class="city__location--change-button" href="#modal-popup">Change</a>
             </div>
         </div>
     </footer>
+    <form class="popup" id="modal-popup" action="#">
+        <div class="popup__content">
+            <a href="#change-button" class="popup__close">&times;</a>
+            <div class="popup__header">Change Location</div>
+            <div class="popup__body">
+                <input type="text" placeholder="City Name" required>
+                <input type="text" placeholder="Country" required>
+            </div>
+            <div class="popup__footer">
+                <button class="popup__button">Save</button>
+            </div>
+        </div>
+    </form>
 </body>
 </html>

@@ -161,15 +161,19 @@
         }
         
         &__location--change-button{
-            font-size: 12px;
-            padding: 7px 20px;
-            background: inherit;
-            color: #EFF0F3;
-            outline: none;
-            border: 1px solid #EFF0F3;
-            cursor: pointer;
-            opacity: 0;
-            animation: moveInFromRight 1s ease-in-out 0.8s forwards;  // after animation, opacity turns to the value of 1
+            &:link,
+            &:visited{
+                font-size: 12px;
+                padding: 7px 20px;
+                background: inherit;
+                color: #EFF0F3;
+                outline: none;
+                border: 1px solid #EFF0F3;
+                text-decoration: none;
+                cursor: pointer;
+                opacity: 0;
+                animation: moveInFromRight 1s ease-in-out 0.8s forwards;  // after animation, opacity turns to the value of 1
+            }
             
             &:hover{
                 background: #EFF0F3;

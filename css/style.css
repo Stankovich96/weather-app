@@ -94,7 +94,7 @@ body {
     .footer .city__location {
       margin-right: 30px;
       animation: moveInFromRight 1s ease-in-out; }
-    .footer .city__location--change-button {
+    .footer .city__location--change-button:link, .footer .city__location--change-button:visited {
       font-size: 12px;
       padding: 7px 20px;
       background: inherit;
@@ -102,11 +102,91 @@ body {
       outline: none;
       border: 1px solid #EFF0F3;
       cursor: pointer;
+      text-decoration: none;
       animation: moveInFromRight 1s ease-in-out; }
-      .footer .city__location--change-button:hover {
-        background: #EFF0F3;
-        color: #0A0B0D;
-        font-weight: bold; }
+    .footer .city__location--change-button:hover {
+      background: #EFF0F3;
+      color: #0A0B0D;
+      font-weight: bold; }
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s; }
+  .popup__content {
+    height: 400px;
+    width: 30%;
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #0A0B0D;
+    border-radius: 15px;
+    padding: 30px 50px 50px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.25);
+    transition: all .4s .2s; }
+  .popup__header {
+    font-size: 30px;
+    font-weight: bold; }
+  .popup__body input {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #A3A3A3;
+    border-radius: 5px;
+    margin: 40px 0;
+    outline: none; }
+    .popup__body input::-webkit-input-placeholder {
+      font-size: 14px;
+      color: #A3A3A3; }
+    .popup__body input:focus {
+      border-color: #012546; }
+  .popup__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 60px; }
+  .popup__button {
+    padding: 10px 35px;
+    color: #EFF0F3;
+    background: #0A0B0D;
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    transition: all .2s; }
+    .popup__button:active {
+      background: #4d5463;
+      transform: scale(1.1); }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__close:link, .popup__close:visited {
+    color: inherit;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 25px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1; }
+  .popup__close:hover {
+    color: #fff;
+    background: #4d4d4d;
+    padding: 2px 6px; }
 
 @keyframes moveInFromLeft {
   0% {
@@ -253,20 +333,21 @@ body {
       margin-right: 30px;
       opacity: 0;
       animation: moveInFromRight 1s ease-in-out 0.8s forwards; }
-    #weather___footer .city__location--change-button {
+    #weather___footer .city__location--change-button:link, #weather___footer .city__location--change-button:visited {
       font-size: 12px;
       padding: 7px 20px;
       background: inherit;
       color: #EFF0F3;
       outline: none;
       border: 1px solid #EFF0F3;
+      text-decoration: none;
       cursor: pointer;
       opacity: 0;
       animation: moveInFromRight 1s ease-in-out 0.8s forwards; }
-      #weather___footer .city__location--change-button:hover {
-        background: #EFF0F3;
-        color: #0A0B0D;
-        font-weight: bold; }
+    #weather___footer .city__location--change-button:hover {
+      background: #EFF0F3;
+      color: #0A0B0D;
+      font-weight: bold; }
 
 .weather-card {
   z-index: 1;
