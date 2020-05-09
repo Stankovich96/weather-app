@@ -46,17 +46,22 @@ body {
         display: inline-block;
         opacity: 1; }
       .header .search__input:focus {
-        outline: none; }
+        outline: none;
+        display: inline-block;
+        border-bottom: 1px solid #EFF0F3;
+        opacity: 1; }
     .header .search__button {
       border: none;
       background: inherit; }
       .header .search__button:focus {
         outline: none; }
+      .header .search__button:active {
+        transform: translateY(4px); }
     .header .search__icon {
       height: 25px;
       width: 25px;
       cursor: pointer; }
-      .header .search__icon:focus {
+      .header .search__icon:active {
         transform: translateY(4px); }
 
 .text-box {
@@ -222,6 +227,9 @@ body {
   to {
     opacity: 1; } }
 
+#rainy-weather-card, #cloudy-weather-card, #sunny-weather-card {
+  display: none; }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -266,7 +274,10 @@ body {
             display: inline-block;
             opacity: 1; }
           .container .first-column .header .search__input:focus {
-            outline: none; }
+            outline: none;
+            display: inline-block;
+            border-bottom: 1px solid #EFF0F3;
+            opacity: 1; }
           .container .first-column .header .search__input::-webkit-input-placeholder {
             color: #c7c7c7; }
         .container .first-column .header .search__button {
@@ -274,11 +285,13 @@ body {
           background: inherit; }
           .container .first-column .header .search__button:focus {
             outline: none; }
+          .container .first-column .header .search__button:active {
+            transform: translateY(4px); }
         .container .first-column .header .search__icon {
           height: 25px;
           width: 25px;
           cursor: pointer; }
-          .container .first-column .header .search__icon:focus {
+          .container .first-column .header .search__icon:active {
             transform: translateY(4px); }
   .container .second-column {
     background: #fff;
@@ -289,7 +302,8 @@ body {
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.28) 70%, rgba(255, 255, 255, 0) 100%);
   background-blend-mode: overlay;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  animation: animateWidthAppearance 0.75s ease-in-out; }
+  animation: animateWidthAppearance 0.75s ease-in-out;
+  width: 102%; }
   .weather__info {
     margin: 0px 20px 40px;
     margin-right: -50px;

@@ -61,6 +61,9 @@ body{
 
             &:focus{
                 outline: none;
+                display: inline-block;
+                border-bottom: 1px solid #EFF0F3;
+                opacity: 1;
             }
         }
         &__button{
@@ -70,14 +73,18 @@ body{
             &:focus{
                 outline: none;
             }
+
+            &:active{
+                transform: translateY(4px);
+            }
         }
         
         &__icon{
             height: 25px;
             width: 25px;
             cursor: pointer;
-
-            &:focus{
+            
+            &:active{
                 transform: translateY(4px);
             }
         }
@@ -308,3 +315,15 @@ body{
     from{ opacity: 0; }
     to{ opacity: 1; }
 }
+
+#rainy-weather-card, #cloudy-weather-card, #sunny-weather-card {
+    display: none;
+}
+
+// #welcome-header, #welcome-text-box, #welcome-footer{
+//     display: none;
+// }
+
+// #sunny-weather-card{
+//     display: flex;
+// }

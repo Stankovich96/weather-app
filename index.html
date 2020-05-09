@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,46 +12,266 @@
 
     <title>WeatherSpae | Simple weather forecast application</title>
 </head>
+
 <body>
-    <header class="header">
+    <!-- Welcome page starts here -->
+    <header class="header" id="welcome-header">
         <div class="logo-box">
             <img src="img/WeatherSpae TM.svg" alt="Logo" class="logo">
         </div>
         
         <form action="#" class="search">
             <input type="text" class="search__input" placeholder="City name, Country">
-            <button class="search__button">
+            <button class="search__button" type="submit">
                 <img src="img/search.svg" class="search__icon" alt="Search">
             </button>
         </form>
     </header>
 
-    <section class="text-box">
+    <section class="text-box" id="welcome-text-box">
         <h1 class="heading-primary">What's the weather ?</h1>
         <div class="horizontal-rule"><span class="horizontal_rule--white"></span></div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="welcome-footer">
         <div class="date-stamp">14:04 PM - Saturday, 11 April 2020</div>
         <div class="city">
-            <div class="city__location">Onitsha City, Nigeria</div>
+            <div class="city__location" id="city-location">Onitsha City, Nigeria</div>
             <div class="city__location--change" id="change-button">
-                <a class="city__location--change-button" href="#modal-popup">Change</a>
+                <a class="city__location--change-button" href="#">Change</a>
             </div>
         </div>
     </footer>
-    <form class="popup" id="modal-popup" action="#">
+    <!-- End of Welcome page -->
+
+    <!-- Rainy Weather Card starts here -->
+    <section class="container" id="rainy-weather-card">
+        <div class="first-column">
+            <header class="header">
+                <div class="logo-box">
+                    <img src="img/WeatherSpae TM.svg" alt="Logo" class="logo">
+                </div>
+                
+                <form action="#" class="search">
+                    <input type="text" class="search__input" placeholder="City name, Country">
+                    <button class="search__button" type="submit">
+                        <img src="img/search.svg" class="search__icon" alt="Search">
+                    </button>
+                </form>
+            </header>
+        
+            <section class="weather">
+                <div class="weather__info">
+                    <div class="weather__info--temp">24<span class="weather__info--temp-deg">o</span></div>
+                    <div>
+                        <p class="weather__info--message">Today is a rainy day</p>
+                        <p class="weather__info--tip">Don't forget your umbrella</p>
+                    </div>
+                </div>
+            
+                <div class="weather__footer" id="weather___footer">
+                    <div class="date-stamp">14:04 PM - Saturday, 11 April 2020</div>
+                    <div class="city">
+                        <div class="city__location">Onitsha City, Nigeria</div>
+                        <div class="city__location--change" id="change-button">
+                            <a class="city__location--change-button" href="#">Change</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="second-column weather-card">
+            <div>
+                <div class="weather-card__loc">
+                    <p class="weather-card__loc-city">Onitsha</p>
+                    <p class="weather-card__loc-country">Nigeria</p>
+                </div>
+                <div class="weather-card__thumbnail">
+                    <img src="img/rainy-thumbnail.svg" alt="rainy icon">
+                    <div class="weather__info--temp">24 <span class="weather__info--temp-deg"> o</span></div>
+                </div>
+            </div>
+            <div class="weather-card__details">
+                <h2 class="weather-card__header">Weather Details</h2>
+    
+                <div class="weather-card__stats">
+                    <p id="w-cloudy">Cloudy</p>
+                    <span id="w-cloudy-value">62%</span>
+                </div>
+                <div class="weather-card__stats">
+                        <p id="w-precipitation">Feels like</p>
+                        <span id="w-precipitation-value">18%</span>
+                    </div>
+                    <div class="weather-card__stats">
+                        <p id="w-humidity">Humidity</p>
+                        <span id="w-humidity-value">32%</span>
+                    </div>
+                    <div class="weather-card__stats">
+                        <p id="w-wind">Wind</p>
+                        <span id="w-wind-value">21 km/h</span>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Rainy card weather -->
+
+    <!-- Cloudy Weather Card starts here -->
+    <section class="container" id="cloudy-weather-card">
+        <div class="first-column">
+                <header class="header">
+                    <div class="logo-box">
+                        <img src="img/WeatherSpae TM.svg" alt="Logo" class="logo">
+                    </div>
+                    
+                    <form action="#" class="search">
+                        <input type="text" class="search__input" placeholder="City name, Country">
+                        <button class="search__button" type="submit">
+                            <img src="img/search.svg" class="search__icon" alt="Search">
+                        </button>
+                    </form>
+                </header>
+            
+                <section class="weather">
+                    <div class="weather__info">
+                        <div class="weather__info--temp">28<span class="weather__info--temp-deg">o</span></div>
+                        <div>
+                            <p class="weather__info--message">Today is a cloudy day</p>
+                            <p class="weather__info--tip">It’s likely to be cloudy and cold</p>
+                        </div>
+                    </div>
+                
+                    <div class="weather__footer" id="weather___footer">
+                        <div class="date-stamp">14:04 PM - Saturday, 11 April 2020</div>
+                        <div class="city">
+                            <div class="city__location">Onitsha City, Nigeria</div>
+                            <div class="city__location--change" id="change-button">
+                                    <a class="city__location--change-button" href="#">Change</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>
+        <div class="second-column weather-card">
+            <div>
+                <div class="weather-card__loc">
+                    <p class="weather-card__loc-city">Onitsha</p>
+                    <p class="weather-card__loc-country">Nigeria</p>
+                </div>
+                <div class="weather-card__thumbnail">
+                    <img src="img/cloudy-thumbnail.svg" alt="cloudy icon">
+                    <div class="weather__info--temp">28 <span class="weather__info--temp-deg"> o</span></div>
+                </div>
+            </div>
+            <div class="weather-card__details">
+                <h2 class="weather-card__header">Weather Details</h2>
+    
+                <div class="weather-card__stats">
+                    <p id="w-cloudy">Cloudy</p>
+                    <span id="w-cloudy-value">62%</span>
+                </div>
+                <div class="weather-card__stats">
+                    <p id="w-precipitation">Feels like</p>
+                    <span id="w-precipitation-value">18%</span>
+                </div>
+                <div class="weather-card__stats">
+                    <p id="w-humidity">Humidity</p>
+                    <span id="w-humidity-value">32%</span>
+                </div>
+                <div class="weather-card__stats">
+                    <p id="w-wind">Wind</p>
+                    <span id="w-wind-value">21 km/h</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Cloudy weather card -->
+
+
+    <!-- Sunny Weather Card starts here -->
+    <section class="container" id="sunny-weather-card">
+        <div class="first-column">
+                <header class="header">
+                    <div class="logo-box">
+                        <img src="img/WeatherSpae TM.svg" alt="Logo" class="logo">
+                    </div>
+                    
+                    <form action="#" class="search">
+                        <input type="text" class="search__input" placeholder="City name, Country">
+                        <button class="search__button" type="submit">
+                            <img src="img/search.svg" class="search__icon"  alt="Search" id="image-search-icon">
+                        </button>
+                    </form>
+                </header>
+            
+                <section class="weather">
+                    <div class="weather__info">
+                        <div class="weather__info--temp">36<span class="weather__info--temp-deg">o</span></div>
+                        <div>
+                            <p class="weather__info--message">Today is a sunny day</p>
+                            <p class="weather__info--tip">Remember to put on your shade</p>
+                        </div>
+                    </div>
+                
+                    <div class="weather__footer" id="weather___footer">
+                        <div class="date-stamp">14:04 PM - Saturday, 11 April 2020</div>
+                        <div class="city">
+                            <div class="city__location">Onitsha City, Nigeria</div>
+                            <div class="city__location--change" id="change-button">
+                                <a class="city__location--change-button" href="#">Change</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>
+        <div class="second-column weather-card">
+            <div>
+                <div class="weather-card__loc">
+                    <p class="weather-card__loc-city">Onitsha</p>
+                    <p class="weather-card__loc-country">Nigeria</p>
+                </div>
+                <div class="weather-card__thumbnail">
+                    <img src="img/sunny-thumbnail.svg" alt="sunny icon">
+                    <div class="weather__info--temp">36 <span class="weather__info--temp-deg"> o</span></div>
+                </div>
+            </div>
+            <div class="weather-card__details">
+                <h2 class="weather-card__header">Weather Details</h2>
+    
+                <div class="weather-card__stats">
+                    <p id="w-cloudy">Cloudy</p>
+                    <span id="w-cloudy-value">62%</span>
+                </div>
+                <div class="weather-card__stats">
+                    <p id="w-precipitation">Precipitation</p>
+                    <span id="w-precipitation-value">18%</span>
+                </div>
+                <div class="weather-card__stats">
+                    <p id="w-humidity">Humidity</p>
+                    <span id="w-humidity-value">32%</span>
+                </div>
+                <div class="weather-card__stats">
+                    <p id="w-wind">Wind</p>
+                    <span id="w-wind-value">21 km/h</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Sunny Weather Card -->
+
+    <form class="popup" id="modal-popup">
         <div class="popup__content">
-            <a href="#change-button" class="popup__close">&times;</a>
+            <a href="#" class="popup__close">&times;</a>
             <div class="popup__header">Change Location</div>
             <div class="popup__body">
-                <input type="text" placeholder="City Name" required>
-                <input type="text" placeholder="Country" required>
+                <input type="text" id="input-city" placeholder="City Name" required>
+                <input type="text" id="input-country" placeholder="Country" required>
             </div>
             <div class="popup__footer">
-                <button class="popup__button">Save</button>
+                <button class="popup__button" type="submit">Save</button>
             </div>
         </div>
     </form>
+
+    <script type="module" src="js/script.js"></script>
 </body>
 </html>

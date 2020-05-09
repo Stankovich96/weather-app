@@ -1,0 +1,5 @@
+node_modules/
+.package-lock.json
+.rainy.weather.html
+.sunny.weather.html
+.cloudy.weather.html
