@@ -28,22 +28,22 @@ function hideWeatherCards(){
 export default function weatherCard(weatherData, reverseAddress){
     if ((weatherData.weather[0].description.includes("clouds") || weatherData.weather[0].description.includes("clear"))) {
         hideIndexPage();
-        cloudyWeather(weatherData, reverseAddress);
         hideWeatherCards();
         document.querySelector('#cloudy-weather-card').style.display = 'flex';     
+        cloudyWeather(weatherData, reverseAddress);
     }
 
-    if (weatherData.weather[0].description.includes("rain")) {
+    if (weatherData.weather[0].description.includes("rain") || weatherData.weather[0].description.includes("thunderstorm")) {
         hideIndexPage();
-        rainyWeather(weatherData, reverseAddress);
         hideWeatherCards();
         document.querySelector('#rainy-weather-card').style.display = 'flex';     
+        rainyWeather(weatherData, reverseAddress);
     }
 
     if (weatherData.weather[0].description.includes("sunny")) {
         hideIndexPage();
-        sunnyWeather(weatherData, reverseAddress);
         hideWeatherCards();
         document.querySelector('#sunny-weather-card').style.display = 'flex';     
+        sunnyWeather(weatherData, reverseAddress);
     }
 }
