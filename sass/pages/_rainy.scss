@@ -7,24 +7,64 @@
     background-size: cover;
     background-position: bottom;
     overflow: hidden;
+    @include respond(phone){
+        overflow: hidden;
+        }
 
     .first-column{
         width: 75%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;  
+        justify-content: space-between;
+        @include respond(phone){
+        width: 100%;
+        }
 
         .header{
             display: flex;
             justify-content: space-between;
             padding: 30px 50px 30px 70px;
-        
+            @include respond(phone){
+            padding: 30px 50px 10px 10px;
+
+            }
+
+            #menu{
+                display: none;
+                @include respond(phone){
+                width: 35px;
+                height: 30px;
+                margin: 0 0 20px 30px;
+                cursor: pointer;
+                display: block;
+                z-index:999;
+                }
+            }
+
+            .bar{
+            
+                @include respond(phone){
+                    height: 5px;
+                    width: 100%;
+                    background-color: #fff;
+                    display: block;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                    animation: moveInFromLeft 1s ease-in-out;
+                    
+                }
+            }
+
+
             .logo-box{
                 animation: moveInFromLeft 1s ease-in-out;
             }
             
             .logo{
                 height: 30px;
+                @include respond(phone){
+                    height: 25px;  
+                }
             }
             
             .search{
@@ -94,6 +134,20 @@
     .second-column{
         background: #fff;
         width: 25%;
+        @include respond(phone){
+            background: #fff;
+            width: 75%;
+            display: none;
+            z-index:100;
+
+        }
+    }
+    .show{
+        display: block;
+    }
+    .hide{
+        display:none;
+        width: 25%;
     }
 }
 
@@ -123,12 +177,20 @@
             font-size: 130px;
             font-weight: bold;
             margin-right: 35px;
+            @include respond(phone){
+            font-size: 100px;
+            font-weight: bold;
+            margin-right: 40px;  
+            }
 
             &-deg{
                 font-size: 50px;
                 font-weight: lighter;
                 font-family: 'Poppins', sans-serif;
                 vertical-align: text-top;
+                @include respond(phone){
+                    font-size: 35px; 
+                }
             }
         }
 
@@ -140,12 +202,18 @@
             font-size: 30px;
             font-weight: bold;
             letter-spacing: 0.02em;
+            @include respond(phone){
+                font-size: 20px;
+            }
         }
 
         &--tip{
             color: #cecece;
             font-size: 20px;
             font-weight: lighter;
+            @include respond(phone){
+                font-size: 15px;
+            }
         }
     }
 }
@@ -199,7 +267,9 @@
     color: #5C5C63;
     animation: translateFromLeft 0.75s ease-in;
     overflow: hidden;
-
+    @include respond(phone){
+        z-index: 100;
+    }
     & > div{ 
         opacity: 0;
         margin: 65px 50px 70px 32px;
