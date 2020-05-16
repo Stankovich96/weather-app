@@ -2,7 +2,7 @@ import weatherStatusByCityCountry from './modules/weatherStatus.js';
 import getAddressFromLatLong from './modules/getAddress.js';
 
 const WeatherApiKey = "8f7a94630b1569973b8cf33db719e169";
-
+const jude = 'jude';
 /**
  *  Fetch user's location using IP address API
  *  @return { Promise } (JsonResponse) response in form of json from the API
@@ -158,6 +158,59 @@ function runWeatherForecast(e){
  *  when the user wants to change location by opening the modal, execute runWeatherForecast function
  */
 popupModal.addEventListener('submit', runWeatherForecast);
+
+/**
+ *  Open Hamburger-menu
+ */
+function onClickMenu(){ 
+
+    document.querySelectorAll('.second-column').forEach(column => column.classList.add('show'));
+
+    document.querySelectorAll('.first-column').forEach(column => column.classList.add('hide'));
+    
+    console.log("Damn A"); 
+    
+}
+
+//Close Hamburger Menu
+function onClickMenuClose(){ 
+    console.log("Damn B"); 
+    document.querySelectorAll('.second-column').forEach(column => column.classList.remove('show'));
+
+    document.querySelectorAll('.first-column').forEach(column => column.classList.remove('hide'));
+    
+    
+    console.log("Damn C"); 
+    
+}
+
+/**
+ *  Get the menus by id
+ */
+var menuIcons = document.querySelectorAll('#menu');
+
+/**
+ *  Foreach menu in all the cards put an eventlistener
+ */
+menuIcons.forEach(menuIcon => 
+    menuIcon.addEventListener('click', ()=>{
+        onClickMenu();
+    })
+);
+
+/**
+ *  Get the second-columns after it has been inserted into the DOM
+ */
+var secondColumns = document.querySelectorAll('.second-column');
+
+/**
+ *  Foreach second-column in all the cards put an eventlistener
+ */
+secondColumns.forEach(secondcolumn =>
+    secondcolumn.addEventListener('click',()=>{
+        onClickMenuClose();
+    })
+    );
 
 
 /**
